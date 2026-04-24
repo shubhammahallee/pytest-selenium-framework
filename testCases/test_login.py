@@ -7,3 +7,4 @@ def test_login(setup):
  lp.setPassword(ReadConfig.getPassword())
  lp.clickLogin()
 
+assert "dashboard" in setup.current_url
