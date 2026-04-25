@@ -1,2 +1,19 @@
 from selenium.webdriver.common.by import By
 
+
+class LoginPage:
+ txt_username = (By.ID, "username")
+ txt_password = (By.ID, "password")
+ btn_login = (By.ID, "login")
+  
+ def __init__(self, driver):
+ self.driver = driver
+  
+ def setUsername(self, username):
+ self.driver.find_element(*self.txt_username).send_keys(username)
+  
+ def setPassword(self, password):
+ self.driver.find_element(*self.txt_password).send_keys(password)
+  
+ def clickLogin(self):
+ self.driver.find_element(*self.btn_login).click()
