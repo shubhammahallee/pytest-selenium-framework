@@ -1,4 +1,4 @@
-improt pytest
+import pytest
 from selenium import webdriver
 from utilities.properties import readconfig
 from selenium.webdriver.chrome.options import Options
