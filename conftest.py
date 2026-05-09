@@ -1,30 +1,40 @@
 import pytest
 from selenium import webdriver
-from utilities.properties import readconfig
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
+
+from utilities.ReadProperties import ReadConfig
 
 
 @pytest.fixture()
 def setup():
 
-    browser = readconfig.getBrowser()
+    browser = ReadConfig.getBrowser()
 
-    if browser == "Chrome":
-        driver = webdriver.Chrome()
+    if browser == "chrome":
 
-    elif browser == "Firefox":
-        driver = webdriver.Firefox()
+        driver = webdriver.Chrome(
+            service=Service(ChromeDriverManager().install())
+        )
 
     elif browser == "headless":
+
         options = Options()
         options.add_argument("--headless")
         options.add_argument("--disable-gpu")
         options.add_argument("--no-sandbox")
 
-        driver = webdriver.Chrome(options=options)
+        driver = webdriver.Chrome(
+            service=Service(ChromeDriverManager().install()),
+            options=options
+        )
 
     else:
-        driver = webdriver.Chrome()
+
+        driver = webdriver.Chrome(
+            service=Service(ChromeDriverManager().install())
+        )
 
     driver.maximize_window()
 
