@@ -7,7 +7,7 @@ from selenium.webdriver.chrome.options import Options
 from utilities.ReadProperties import ReadConfig
 
 
-@pytest.fixture()
+@pytest.fixture() 
 def setup():
 
     browser = ReadConfig.getBrowser()
