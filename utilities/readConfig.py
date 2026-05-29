@@ -10,7 +10,7 @@ class ReadConfig:
   def getBrowser():
     return config.get("common info", "browser")
     
-  @staticmethod
+  @staticmethod 
   def getBaseURL():
     return config.get("common info", "browser")
     
