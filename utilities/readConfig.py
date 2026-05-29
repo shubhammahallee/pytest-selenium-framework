@@ -4,7 +4,7 @@ import os
 config = configparser.ConfigParser()
 config.read(os.path.join(os.getcwd(),"Configurations", "config.ini"))
 
-class ReadConfig:
+class ReadConfig: 
 
   @staticmethod
   def getBrowser():
