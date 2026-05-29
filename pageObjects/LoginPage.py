@@ -6,7 +6,7 @@ class LoginPage:
  txt_password = (By.ID, "password")
  btn_login = (By.ID, "login")
   
- def __init__(self, driver):
+ def __init__(self, driver): 
  self.driver = driver
   
  def setUsername(self, username):
