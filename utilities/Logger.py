@@ -3,7 +3,7 @@ import os
 
 class Log_details:
 
-    LOG_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "Report", "test_log.log")
+    LOG_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "Report", "test_log.log") 
 
     @staticmethod
     def get_logger():
