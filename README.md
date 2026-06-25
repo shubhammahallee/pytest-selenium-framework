@@ -32,4 +32,4 @@ pytest-selenium-framework/
 │
 ├── conftest.py
 ├── requirements.txt
-└── README.md
+└── README.md 
