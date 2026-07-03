@@ -24,3 +24,20 @@ from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
+
+# ====================================================================
+# 1. SETUP
+# ====================================================================
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+driver.maximize_window()
+wait = WebDriverWait(driver, 15)
+ 
+BASE_URL = "https://your-ib-payment-gateway.example.com"
+ 
+ 
+def log(step):
+    print(f"[STEP] {step}")
+ 
+ 
+try:
+    driver.get(BASE_URL)
