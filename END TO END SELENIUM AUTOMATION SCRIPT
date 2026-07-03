@@ -1,1 +1,13 @@
-
+"""
+====================================================================
+END TO END SELENIUM AUTOMATION SCRIPT
+Scenario: Internet Banking (IB) + Payment Gateway flow
+Har row jo table me tha, wo yahan cover hai (start se end tak).
+====================================================================
+ 
+NOTE:
+- Locators (By.ID, By.XPATH, By.CSS_SELECTOR, By.NAME etc.) neeche
+  har element ke upar comment me diye hain — apni actual application
+  ke real locators se replace kar dena (ye demo/placeholder hain).
+- Isse chalane ke liye chahiye: pip install selenium webdriver-manager
+"""
