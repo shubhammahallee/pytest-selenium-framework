@@ -54,4 +54,20 @@ try:
  
     log("Page Source check")
     _ = driver.page_source                             # driver.page_source
+
+
+  # ================================================================
+    # 3. LOGIN FORM -> Textbox, Password, Button
+    # ================================================================
+    log("Textbox - Username")
+    username = wait.until(EC.presence_of_element_located((By.ID, "username")))
+    username.clear()                                   # clear()
+    username.send_keys("testuser@example.com")         # send_keys()
+ 
+    log("Password field")
+    password = driver.find_element(By.ID, "password")
+    password.send_keys("SecurePass@123")                # send_keys()
+ 
+    log("Login Button click")
+    driver.find_element(By.ID, "loginBtn").click()      # click()
    
