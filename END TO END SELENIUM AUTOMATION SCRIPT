@@ -41,3 +41,17 @@ def log(step):
  
 try:
     driver.get(BASE_URL)
+
+
+    # ================================================================
+    # 2. PAGE TITLE / URL / SOURCE  (Page Title, Current URL, Page Source)
+    # ================================================================
+    log("Page Title check")
+    print("Title:", driver.title)                     # driver.title
+ 
+    log("Current URL check")
+    print("URL:", driver.current_url)                 # driver.current_url
+ 
+    log("Page Source check")
+    _ = driver.page_source                             # driver.page_source
+   
