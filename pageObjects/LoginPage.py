@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 
 class LoginPage:
  txt_username = (By.ID, "username")
- txt_password = (By.ID, "password")
+ txt_password = (By.ID, "password") 
  btn_login = (By.ID, "login") 
   
  def __init__(self, driver): 
